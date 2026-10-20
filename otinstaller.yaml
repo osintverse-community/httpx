@@ -22,7 +22,7 @@ outputs:
 runtime:
   kind: docker
   # Filled in by the release workflow with the pushed image's digest.
-  image: ghcr.io/osintverse-community/httpx@sha256:0000000000000000000000000000000000000000000000000000000000000000
+  image: ghcr.io/osintverse-community/httpx@sha256:c4452e13098e22c28c3ddc8c119a9c1bc53cba71c69cfcdb52a3cf7f82b648eb
   platforms: [linux/amd64, linux/arm64]
   command: ["httpx", "-u", "{target}", "-silent", "-json", "-title", "-tech-detect", "-status-code", "-ip", "-cdn", "-duc"]
   output_format: jsonl
