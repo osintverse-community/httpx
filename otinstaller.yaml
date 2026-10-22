@@ -3,7 +3,7 @@
 schema: 1
 name: httpx
 namespace: osintverse-community
-version: 1.12.0
+version: 1.12.1
 summary: "Probes a host's web server: status, title, technologies, TLS, CDN and IP"
 readme: README.md
 license: MIT
@@ -22,7 +22,7 @@ outputs:
 runtime:
   kind: docker
   # Filled in by the release workflow with the pushed image's digest.
-  image: ghcr.io/osintverse-community/httpx@sha256:c4452e13098e22c28c3ddc8c119a9c1bc53cba71c69cfcdb52a3cf7f82b648eb
+  image: ghcr.io/osintverse-community/httpx@sha256:4ad3b94cb25229069245a2bf8687be7747a6250ebfd266ed844ac4841944c601
   platforms: [linux/amd64, linux/arm64]
   command: ["httpx", "-u", "{target}", "-silent", "-json", "-title", "-tech-detect", "-status-code", "-ip", "-cdn", "-duc"]
   output_format: jsonl
